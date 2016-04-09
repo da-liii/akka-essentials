@@ -14,7 +14,7 @@ class AggregateActor extends Actor {
     case ReduceData(reduceDataMap) =>
       aggregateInMemoryReduce(reduceDataMap)
     case Result =>
-      println(finalReduceMap.toString)
+      sender ! finalReduceMap.toString
   }
 
   def aggregateInMemoryReduce(reduceList: Map[String, Int]): Unit = {

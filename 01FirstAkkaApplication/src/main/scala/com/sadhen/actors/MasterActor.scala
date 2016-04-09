@@ -16,6 +16,6 @@ class MasterActor extends Actor {
     case line: String => mapActor ! line
     case mapData: MapData => reduceActor ! mapData
     case reduceData: ReduceData => aggregateActor ! reduceData
-    case Result => aggregateActor ! Result
+    case Result => aggregateActor forward Result
   }
 }
