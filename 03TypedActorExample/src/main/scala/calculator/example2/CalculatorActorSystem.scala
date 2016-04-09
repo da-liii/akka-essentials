@@ -3,7 +3,6 @@ import org.akka.essentials.calculator.Calculator
 import org.akka.essentials.calculator.CalculatorInt
 import akka.actor.ActorRef
 import akka.actor.ActorSystem
-import akka.actor.Props
 import akka.actor.TypedActor
 import akka.actor.TypedProps
 import akka.routing._
